@@ -1,0 +1,40 @@
+<div class="fwdht" fxLayout="column" style="background: #F8F7FF;">
+    <div class="search-box-container" style="background-image: url(../../../assets/Pattern.svg);">
+        <div class="sub-container" fxLayout="column">
+            <div class="header">
+                <h1 class="header-line">PokeDex</h1>
+            </div>
+            <div class="search-box" fxLayout="row" fxLayoutAlign="start center">
+                <img src="../../../assets/Search.svg" height="20px" width="20px" style="padding-left: 10px;" />
+                <mat-form-field floatLabel="never" style="width: 100%;" appearance="none">
+                    <input type="text" matInput [(ngModel)]="searchText">
+                </mat-form-field>
+            </div>
+             
+        </div>
+    </div>
+     <div class="card-container" fxFlex>
+        <div class="categoryContainer" fxLayout="row" fxLayoutAlign="start start" fxLayoutWrap>
+             <table class="table table-striped genre-card">
+                <tbody>
+                <tr class="genre" *ngFor="let pokemon of pokeMonList| filter:searchText" >
+                  <td (click)="getDetailsPokeMon(pokemon)"> 
+                      {{pokemon.name | uppercase }}
+                    <img src="../../../assets/Next.svg" class="arrowImage" height="25px" width="25px" />
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+    
+    <div class="button-container">
+        <button class="previous-button" (click)="getPage(0)" [disabled]="disablePrevious">
+            <img src="../../../assets/Back.svg" style="float:left;margin-right:0.5em" width="20px" height="20px">Previous
+        </button>
+        <button class="next-button" (click)="getPage(1)" [disabled]="disableNext">
+            <img src="../../../assets/Next.svg" style="float: right;margin-left:0.5em" width="20px" height="20px">Next
+        </button>
+    </div>
+</div>

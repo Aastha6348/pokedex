@@ -1,0 +1,52 @@
+<div class="fwdht" fxLayout="column">
+    <div class="card-container" fxFlex>
+        <div class="pokemon-name" fxLayout="row" fxLayoutAlign="start center">
+            <div>
+                <img src="../../../assets/Back.svg" height="25px" width="25px" (click)="navigate()" />
+            </div>
+            <h2 style="margin-left: 10px !important;">
+                {{pokeMonData.name | titlecase}}
+            </h2>
+        </div>
+        <div class="data-container">
+            <!-- <div class="pokemon-image">
+                <img [src]="pokeMonImage" class="img-src" height="190px" width="190px"/>
+            </div> -->
+            <div class="pokemon-info">
+                <div class="general">
+                    <div class="basic-info">
+                        <div class="text-container">
+                            <div class="text">Height:   </div>
+                            <div class="text">{{pokeMonData.height}} </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="text">Weight:   </div>
+                            <div class="text">{{pokeMonData.weight}} </div>
+                        </div>
+                        <div class="text-container">
+                            <div class="text">Base Experience: </div>
+                            <div class="text">{{pokeMonData.base_experience}} </div>
+                        </div>
+                    </div>
+                     <div class="pokemon-image">
+                        <img [src]="pokeMonImage" class="img-src" height="150px" width="150px" [align]="right"/>
+                    </div>
+                </div>
+               
+                <div class="types-contents">
+                    Types: 
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let val of pokeMonData.types">{{val.type.name}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+                <div class="abilities-contents">
+                    Abilities: 
+                    <mat-chip-list>
+                        <mat-chip *ngFor="let val of pokeMonData.abilities">{{val.ability.name}}</mat-chip>
+                    </mat-chip-list>
+                </div>
+                <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+            </div>
+        </div>
+    </div>
+</div>

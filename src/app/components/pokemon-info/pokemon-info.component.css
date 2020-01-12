@@ -1,0 +1,87 @@
+.search-box-container {
+    width: 100%;
+}
+
+.back-header {
+    color: #5E56E7;
+    margin-bottom: 16px;
+}
+
+.search-box {
+    width: 100%;
+    background: #F0F0F6;
+    border-radius: 4px;
+    padding: 1px;
+}
+
+.search-box:hover {
+    border: 1px solid #5E56E7;
+}
+
+.search-box:focus {
+    border: 1px solid #5E56E7;
+}
+
+.card-container {
+    overflow: auto;
+}
+
+.pokemon-name {
+    font-weight: 600;
+    text-transform: capitalize;
+    text-align: center;
+    padding: 15px;
+    color: #1A5276 ;
+}
+
+.data-container {
+    display: flex;
+  }
+  .img-src {
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+  }
+  
+  .pokemon-info {
+    flex: 1;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+    background-color: #1A5276 ;
+    color: white;
+    width: 80px;
+    height: 650px;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .general {
+      display: flex;
+  }
+
+  .basic-info {
+      flex: 0 0 80%;
+      border-radius: 8px;
+      margin-top: 10px;
+      padding-top: 10px;
+  }
+
+  .text-container {
+      display: flex;
+      font-size: 18px;
+      text-align: justify;
+  }
+
+  .text {
+      margin-right: 10px;
+  }
+  .types-contents, .abilities-contents {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+::ng-deep .mat-chip-list-wrapper .mat-standard-chip, .mat-chip-list-wrapper input.mat-input-element { 
+    margin-top: 10px;
+    width: 110px;
+    background-color: #AF601A;
+    color: white;
+    text-transform: capitalize;
+    box-shadow: 0 2px 5px 0 rgba(211, 209, 238, 0.5);
+}
